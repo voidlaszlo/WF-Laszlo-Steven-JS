@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" id="distance" placeholder="KM">
+	<input type="text" id="fuel" placeholder="fuel">
+	<input type="button" id="button" value="Calculate">
+	<p id="output"></p>
+<script>
+function fuelConsumption() {
+	liters = parseFloat(document.getElementById('fuel').value);
+	km = parseFloat(document.getElementById('distance').value);
+	onekm = (liters / km);
+	hundkm = onekm * 100;
+	document.getElementById("output").innerText = `Your car consumes ${hundkm} liters per 100km, which is ${onekm} liters per km.`
+}
+
+	document.getElementById("button").addEventListener('click', function() {
+		fuelConsumption()
+	})
+
+
+</script>
+</body>
+</html>
