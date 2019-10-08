@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Year</title>
+</head>
+<body>
+
+<script>
+	function calcYear() {
+		curr = new Date().getFullYear();
+		user = parseFloat(prompt("Enter your birth year."));
+		res = curr - user;
+		document.write("You are " + res + " years old.");
+
+	}
+	calcYear();
+</script>
+</body>
+</html>
