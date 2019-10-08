@@ -42,10 +42,6 @@ console.log("Prater: " + praterFree)
 
 function hiltonCompare() {
 	var hiltonInp = parseFloat(document.getElementById("hiltonInput").value);
-	console.log(hiltonFree)
-	console.log(hiltonInp)
-	console.log("Random number is " + isNaN(hiltonFree))
-	console.log("Input number is " + isNaN(hiltonInp))
 	if (hiltonInp > hiltonFree) {
 		document.getElementById("hiltonButton").innerHTML = " ";
 		document.getElementById("hiltonOutput").innerText = `Sorry, no free room for ${hiltonInp} nights`
@@ -75,10 +71,7 @@ function hiltonCompare() {
 
 function marriottCompare() {
 	var marriottInp = parseFloat(document.getElementById("marriottInput").value);
-	console.log(marriottFree)
-	console.log(marriottInp)
-	console.log("Random number is " + isNaN(marriottFree))
-	console.log("Input number is " + isNaN(marriottInp))
+
 	if (marriottInp > marriottFree) {
 		document.getElementById("marriottButton").innerHTML = " ";
 		document.getElementById("marriottOutput").innerText = `Sorry, no free room for ${marriottInp} nights`
@@ -108,10 +101,7 @@ function marriottCompare() {
 
 function praterCompare() {
 	var praterInp = parseFloat(document.getElementById("praterInput").value);
-	console.log(praterFree)
-	console.log(praterInp)
-	console.log("Random number is " + isNaN(praterFree))
-	console.log("Input number is " + isNaN(praterInp))
+
 	if (praterInp > praterFree) {
 		document.getElementById("praterButton").innerHTML = " ";
 		document.getElementById("praterOutput").innerText = `Sorry, no free room for ${praterInp} nights`
