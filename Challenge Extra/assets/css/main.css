@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+div.container {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+
+div.container div.todolist {
+  background-color: #eee;
+  min-height: 300px;
+  min-width: 400px;
+  padding: 1em;
+}
+
+div.container div.todolist h1 {
+  margin: 1em 0;
+}
+
+div.container div.todolist ul {
+  margin: 1em 0;
+}
+/*# sourceMappingURL=main.css.map */
