@@ -1,0 +1,144 @@
+<!-- I AM THE KING OF OVERCOMPLICATING EVERYTHING -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hotelcheck</title>
+</head>
+<body>
+<h1>Hilton</h1>
+<h4>Enter the amount of days you want to stay:</h4>
+<input type="text" id="hiltonInput" placeholder="Days">
+<p id="hiltonOutput"></p>
+<div id="hiltonButton"></div>
+<h1>Marriott</h1>
+<h4>Enter the amount of days you want to stay:</h4>
+<input type="text" id="marriottInput" placeholder="Days">
+<p id="marriottOutput"></p>
+<div id="marriottButton"></div>
+<h1>Prater</h1>
+<h4>Enter the amount of days you want to stay:</h4>
+<input type="text" id="praterInput" placeholder="Days">
+<p id="praterOutput"></p>
+<div id="praterButton"></div>
+
+<script>
+function HotelConstructor(name) {
+	this.name = name;
+	this.freeFor = function() {
+		return Math.round(Math.random() * 10);
+	};
+}
+var hiltonHotel = new HotelConstructor('Hilton');
+var marriottHotel = new HotelConstructor('Marriott');
+var praterHotel = new HotelConstructor('Hotel am Prater');
+var marriottFree = parseFloat(marriottHotel.freeFor());
+var praterFree = parseFloat(praterHotel.freeFor());
+var hiltonFree = parseFloat(hiltonHotel.freeFor());
+console.log("Hilton: " + hiltonFree)
+console.log("Marriott: " + marriottFree)
+console.log("Prater: " + praterFree)
+
+
+function hiltonCompare() {
+	var hiltonInp = parseFloat(document.getElementById("hiltonInput").value);
+	if (hiltonInp > hiltonFree) {
+		document.getElementById("hiltonButton").innerHTML = " ";
+		document.getElementById("hiltonOutput").innerText = `Sorry, no free room for ${hiltonInp} nights`
+	}
+
+	else if (isNaN(hiltonInp) == false &&  hiltonFree >= hiltonInp) {
+		document.getElementById("hiltonOutput").innerText = " ";
+		var hiltonBtn = document.getElementById('hiltonButton');
+		hiltonBtn.innerHTML = ""
+		var button = document.createElement('BUTTON');
+		var text = document.createTextNode('Reserve Now!');
+		button.appendChild(text);
+		hiltonBtn.appendChild(button);
+		console.log("btn created")
+	}
+
+	else if (hiltonInp == "") {
+		document.getElementById("hiltonButton").innerHTML = " ";
+		document.getElementById("hiltonOutput").innerText = " ";
+	}
+	else {
+		document.getElementById("hiltonButton").innerHTML = " ";
+		document.getElementById("hiltonOutput").innerText = " ";
+
+	}
+}
+
+function marriottCompare() {
+	var marriottInp = parseFloat(document.getElementById("marriottInput").value);
+
+	if (marriottInp > marriottFree) {
+		document.getElementById("marriottButton").innerHTML = " ";
+		document.getElementById("marriottOutput").innerText = `Sorry, no free room for ${marriottInp} nights`
+	}
+
+	else if (isNaN(marriottInp) == false &&  marriottFree >= marriottInp) {
+		document.getElementById("marriottOutput").innerText = " ";
+		var marriottBtn = document.getElementById('marriottButton');
+		marriottBtn.innerHTML = ""
+		var button = document.createElement('BUTTON');
+		var text = document.createTextNode('Reserve Now!');
+		button.appendChild(text);
+		marriottBtn.appendChild(button);
+		console.log("btn created")
+	}
+
+	else if (marriottInp == "") {
+		document.getElementById("marriottButton").innerHTML = " ";
+		document.getElementById("marriottOutput").innerText = " ";
+	}
+	else {
+		document.getElementById("marriottButton").innerHTML = " ";
+		document.getElementById("marriottOutput").innerText = " ";
+
+	}
+}
+
+function praterCompare() {
+	var praterInp = parseFloat(document.getElementById("praterInput").value);
+
+	if (praterInp > praterFree) {
+		document.getElementById("praterButton").innerHTML = " ";
+		document.getElementById("praterOutput").innerText = `Sorry, no free room for ${praterInp} nights`
+	}
+
+	else if (isNaN(praterInp) == false &&  praterFree >= praterInp) {
+		document.getElementById("praterOutput").innerText = " ";
+		var praterBtn = document.getElementById('praterButton');
+		praterBtn.innerHTML = ""
+		var button = document.createElement('BUTTON');
+		var text = document.createTextNode('Reserve Now!');
+		button.appendChild(text);
+		praterBtn.appendChild(button);
+		console.log("btn created")
+	}
+
+	else if (praterInp == "") {
+		document.getElementById("praterButton").innerHTML = " ";
+		document.getElementById("praterOutput").innerText = " ";
+	}
+	else {
+		document.getElementById("praterButton").innerHTML = " ";
+		document.getElementById("praterOutput").innerText = " ";
+
+	}
+}
+
+document.getElementById("hiltonInput").addEventListener('input', function() {
+		hiltonCompare()
+	})
+document.getElementById("marriottInput").addEventListener('input', function() {
+		marriottCompare()
+	})
+document.getElementById("praterInput").addEventListener('input', function() {
+		praterCompare()
+	})
+
+</script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Roll of the Dice - 2P Mode</title>
+</head>
+
+<body>
+    <div>
+        <span>
+            <h1 id="p1name">Player 1</h1>
+        </span>
+        <span>
+            <h1>Versus</h1>
+        </span>
+        <span>
+            <h1 id="p2name">Player 2</h1>
+        </span>
+    </div>
+    <div class="gamebox">
+        <div class="p1side">
+            <div id="p1randomdice"></div>
+            <input type="button" id="p1start" value="Play!">
+        </div>
+        <div class="p2side">
+            <div id="p2randomdice"></div>
+            <input type="button" id="p2start" value="Play!">
+        </div>
+    </div>
+    <script>
+    var p1Score = 0
+    var p2Score = 0
+
+    function gameP1() {
+        var dice1 = Math.round(Math.random) * 6
+        var dice2 = Math.round(Math.random) * 6
+        var dice3 = Math.round(Math.random) * 6
+        p1dicesum = dice1 + dice2 + dice3
+
+        switch (dice1) {
+            case 1
+            var p1dicearea = document.getElementById(p1randomdice)
+            var img1 = document.createElement("img");
+            img1.src = "img./Dice-1.jpg";
+            p1dicearea.appendChild(img1);
+            break;
+            case 2
+            var p1dicearea = document.getElementById(p1randomdice)
+            var img1 = document.createElement("img");
+            img1.src = "img./Dice-2.jpg";
+            p1dicearea.appendChild(img1);
+            break;
+            case 3
+            var p1dicearea = document.getElementById(p1randomdice)
+            var img1 = document.createElement("img");
+            img1.src = "img./Dice-3.jpg";
+            p1dicearea.appendChild(img1);
+            break;
+            case 4
+            var p1dicearea = document.getElementById(p1randomdice)
+            var img1 = document.createElement("img");
+            img1.src = "img./Dice-4.jpg";
+            p1dicearea.appendChild(img1);
+            break;
+            case 5
+            var p1dicearea = document.getElementById(p1randomdice)
+            var img1 = document.createElement("img");
+            img1.src = "img./Dice-5.jpg";
+            p1dicearea.appendChild(img1);
+            break;
+            case 6
+            var p1dicearea = document.getElementById(p1randomdice)
+            var img1 = document.createElement("img");
+            img1.src = "img./Dice-6.jpg";
+            p1dicearea.appendChild(img1);
+            break;
+            default
+            document.getElementById(p1randomdice).innerHTML = "Error while rolling dice."
+            break;
+        }
+        switch (dice3) {
+            case 1
+            var p1dicearea = document.getElementById(p1randomdice)
+            var img1 = document.createElement("img");
+            img1.src = "img./Dice-1.jpg";
+            p1dicearea.appendChild(img1);
+            break;
+            case 2
+            var p1dicearea = document.getElementById(p1randomdice)
+            var img1 = document.createElement("img");
+            img1.src = "img./Dice-2.jpg";
+            p1dicearea.appendChild(img1);
+            break;
+            case 3
+            var p1dicearea = document.getElementById(p1randomdice)
+            var img1 = document.createElement("img");
+            img1.src = "img./Dice-3.jpg";
+            p1dicearea.appendChild(img1);
+            break;
+            case 4
+            var p1dicearea = document.getElementById(p1randomdice)
+            var img1 = document.createElement("img");
+            img1.src = "img./Dice-4.jpg";
+            p1dicearea.appendChild(img1);
+            break;
+            case 5
+            var p1dicearea = document.getElementById(p1randomdice)
+            var img1 = document.createElement("img");
+            img1.src = "img./Dice-5.jpg";
+            p1dicearea.appendChild(img1);
+            break;
+            case 6
+            var p1dicearea = document.getElementById(p1randomdice)
+            var img1 = document.createElement("img");
+            img1.src = "img./Dice-6.jpg";
+            p1dicearea.appendChild(img1);
+            break;
+            default
+            document.getElementById(p1randomdice).innerHTML = "Error while rolling dice."
+            break;
+        }
+        switch (dice3) {
+            case 1
+            var p1dicearea = document.getElementById(p1randomdice)
+            var img1 = document.createElement("img");
+            img1.src = "img./Dice-1.jpg";
+            p1dicearea.appendChild(img1);
+            break;
+            case 2
+            var p1dicearea = document.getElementById(p1randomdice)
+            var img1 = document.createElement("img");
+            img1.src = "img./Dice-2.jpg";
+            p1dicearea.appendChild(img1);
+            break;
+            case 3
+            var p1dicearea = document.getElementById(p1randomdice)
+            var img1 = document.createElement("img");
+            img1.src = "img./Dice-3.jpg";
+            p1dicearea.appendChild(img1);
+            break;
+            case 4
+            var p1dicearea = document.getElementById(p1randomdice)
+            var img1 = document.createElement("img");
+            img1.src = "img./Dice-4.jpg";
+            p1dicearea.appendChild(img1);
+            break;
+            case 5
+            var p1dicearea = document.getElementById(p1randomdice)
+            var img1 = document.createElement("img");
+            img1.src = "img./Dice-5.jpg";
+            p1dicearea.appendChild(img1);
+            break;
+            case 6
+            var p1dicearea = document.getElementById(p1randomdice)
+            var img1 = document.createElement("img");
+            img1.src = "img./Dice-6.jpg";
+            p1dicearea.appendChild(img1);
+            break;
+            default
+            document.getElementById(p1randomdice).innerHTML = "Error while rolling dice."
+            break;
+        }
+
+    }
+
+    document.getElementById(p1start).addEventListener('click', function() {
+    	gameP1();
+    })
+    </script>
+</body>
+
+</html>
